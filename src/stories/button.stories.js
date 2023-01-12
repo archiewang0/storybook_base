@@ -17,6 +17,16 @@ redBtn.args ={
     // clickHandler: ()=>{alert('test')}
 }
 
+export const Large = Template.bind({})
+
+Large.args ={
+    bgColor: "red",
+    fontSize: 12,
+    padding: 5,
+    content: "1111111",
+    border: "10px solid black"
+}
+
 // export const redBtn = ()=>{
 //     return <Button
 //             bgColor="green"
