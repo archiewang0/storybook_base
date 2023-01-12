@@ -9,11 +9,15 @@ export default {
         size: {type: "number" , defaultValue: 50},
         bgColor: {type: "string" , defaultValue: 'none'},
         borderColor: {type: "string" , defaultValue: 'none'},
+
+        // 設event紀錄寫入 action
+        clickEvent: {
+            action: "handleClick",
+        }
     }
 }
 
 const Template = ({ size , bgColor, borderColor ,numberOfChildren ,...args}) => <Stack {...args}> 
-    {console.log('check args: ', { numberOfChildren ,...args})}
     {
         [...Array(numberOfChildren).keys()].map(n=>(
             <div style={{
@@ -38,25 +42,6 @@ StackStyle1.args ={
     spacing: 20,
     wrap: true,
     direction:'column',
+    // args 更新參數 此事件物件不會寫入actions裡面
+    // clickEvent: ()=>{ alert('fdsfsdf')}
 }
-
-// export const Large = Template.bind({})
-
-// Large.args ={
-//     bgColor: "red",
-//     fontSize: 12,
-//     padding: 5,
-//     content: "1111111",
-//     border: "10px solid black"
-// }
-
-// export const redBtn = ()=>{
-//     return <Button
-//             bgColor="green"
-//             fontSize={20}
-//             padding={10}
-//             content="sfdfsfds"
-//             >
-//             i'm red button
-//         </Button>
-// }
