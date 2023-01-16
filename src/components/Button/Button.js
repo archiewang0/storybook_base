@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types"
+import './button.scss'
 
 // sb ui controls default is from argument of Button Component 
 const Button =({bgColor= 'none', fontSize=12, border="none" , padding=5 , fontWeight= 300,content ,clickHandler=()=>{}})=>{

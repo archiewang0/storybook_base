@@ -1,11 +1,22 @@
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 
 export default {
     title: "Button",
     component: Button,
+    // parameters: {
+    //     backgrounds: {
+    //         values: [
+    //             { name: 'red', value: '#f00' },
+    //             { name: 'green', value: '#0f0' },
+    //             { name: 'blue', value: '#00f' },
+    //         ],
+    //     },
+    // },
 }
 
-const Template = args => <Button {...args}/>
+const Template = (args) => {
+    return <Button {...args}/>
+}
 
 export const redBtn = Template.bind({})
 
@@ -27,6 +38,15 @@ Large.args ={
     border: "10px solid black"
 }
 
+Large.parameters= {
+        backgrounds: {
+            values: [
+                { name: 'red', value: '#f00' },
+                { name: 'green', value: '#0f0' },
+                { name: 'blue', value: '#00f' },
+            ],
+        },
+    }
 // export const redBtn = ()=>{
 //     return <Button
 //             bgColor="green"
