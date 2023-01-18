@@ -20,7 +20,7 @@ const Button =({bgColor= 'none', fontSize=12, border="none" , padding=5 , fontWe
 Button.propTypes={
     bgColor: propTypes.string,
     fontSize: propTypes.number,
-    border: propTypes.oneOf(['none','1px solid black']),
+    border: propTypes.string,
     padding: propTypes.number,
     fontWeight: propTypes.number,
     content: propTypes.string

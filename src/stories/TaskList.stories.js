@@ -7,11 +7,11 @@ import * as TaskStories from './Task.stories';
 export default {
   component: TaskList,
   title: 'TaskList',
+  // 該所有component stories 的 Canvas將會套用定義的樣式
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
 
-// alert('fdsfsdf111111111')
 
 
 const Template = args => <TaskList {...args} />;
