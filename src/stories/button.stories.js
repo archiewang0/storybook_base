@@ -3,25 +3,67 @@ import Button from "../components/Button/Button";
 export default {
     title: "Button",
     component: Button,
+    // argTypes: {
+    //     // backgroundColor: { control: 'color' },
+    //     // backgrounds: {
+    //     //     control: 'color',
+    //     //     defaultValue: 'yellow',
+    //     // },
+
+
+    //     // 這段code待確認
+    //     // labelData:{
+    //     //     options: ['Normal', 'Bold', 'Italic'],
+    //     //     // mapping: {
+    //     //     //   Bold: <b>Bold</b>,
+    //     //     //   Italic: <i>Italic</i>,
+    //     //     // },
+    //     //     defaultValue: 'Bold',
+
+    //     // },  
+
+    // },
+
     argTypes: {
-        // backgroundColor: { control: 'color' },
-        backgrounds: {
-            control: 'color',
-            defaultValue: 'yellow',
+        // Assigns the argTypes to the Colors category
+        bgColor: {
+          control: 'color',
+          table: {
+            category: 'Colors',
+          },
         },
-
-        // 這段code待確認
-        // labelData:{
-        //     options: ['Normal', 'Bold', 'Italic'],
-        //     // mapping: {
-        //     //   Bold: <b>Bold</b>,
-        //     //   Italic: <i>Italic</i>,
-        //     // },
-        //     defaultValue: 'Bold',
-
-        // },  
-
-    },
+        primary: {
+          table: {
+            category: 'Colors',
+          },
+        },
+        // Assigns the argType to the Text category
+        content: {
+          table: {
+            category: 'Text',
+          },
+        },
+        // Assigns the argType to the Events category
+        onClick: {
+          table: {
+            category: 'Events',
+          },
+        },
+        // Assigns the argType to the Sizes category
+        fontSize: {
+          table: {
+            category: 'Sizes',
+            subcategory: 'fontSize',
+          },
+        },
+        fontWeight:{
+            table: {
+                category: 'Sizes',
+                subcategory: 'fontWeight',
+            }
+        }
+      },
+    
     // parameters: {
     //     backgrounds: {
     //         values: [
@@ -77,7 +119,14 @@ Large.parameters= {
                 { name: 'blue', value: '#00f' },
             ],
         },
-    }
+        docs: {
+            source: {
+            //   code: 'Your code snippet goes here.',
+              language: "jsx",
+              type: "code",
+            },
+        },
+}
 // export const redBtn = ()=>{
 //     return <Button
 //             bgColor="green"

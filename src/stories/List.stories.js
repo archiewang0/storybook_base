@@ -3,7 +3,8 @@ import React from 'react';
 
 import List from '../components/List/List';
 import ListItem from '../components/ListItem/ListItem';
-import CustomMDXDocumentation from './Custom-MDX-Documentation.mdx';
+import TypesetMDX from './typeset.mdx';
+import customMDX from "./customMDX.mdx"
 
 import {
     Title,
@@ -54,7 +55,9 @@ export default {
 
     parameters: {
         docs: {
-            page: CustomMDXDocumentation
+            page: TypesetMDX,
+            // page: customMDX,
+
             // description: { 
             //     component: 'Component Description',
             //   } 
