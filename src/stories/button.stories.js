@@ -26,11 +26,14 @@ export default {
 
     argTypes: {
         // Assigns the argTypes to the Colors category
+        // onClickHandler: {action: 'onCccccc'},
         bgColor: {
-          control: 'color',
-          table: {
-            category: 'Colors',
-          },
+          // control: 'color',
+          // table: {
+          //   category: 'Colors',
+          // },
+          options: ['red', 'blue'],
+          control: { type: 'radio' },
         },
         primary: {
           table: {
@@ -64,7 +67,7 @@ export default {
         }
       },
     
-    // parameters: {
+    parameters: {
     //     backgrounds: {
     //         values: [
     //             { name: 'red', value: '#f00' },
@@ -72,7 +75,11 @@ export default {
     //             { name: 'blue', value: '#00f' },
     //         ],
     //     },
-    // },
+            // actions: { argTypesRegex: '^on.*' } 
+            actions: {
+              handles: ['mouseover', 'click'],
+            },
+    },
 }
 
 const Template = (args ,allArgs) => {
@@ -94,22 +101,32 @@ redBtn.args ={
     fontSize:20,
     padding:10,
     content:"sfdfsfds",
-    P_ElementText: '在Template給新增 args 的key值, 再針對key值給予參數'
-    // clickHandler: ()=>{alert('test')}
+    P_ElementText: '在Template給新增 args 的key值, 再針對key值給予參數',
+    // onClickHandler: ()=>{alert('test')}
 }
 
-export const Large = Template.bind({})
+// export const Large = Template.bind({})
 
-Large.args ={
+// Large.args ={
+//     bgColor: "red",
+//     fontSize: 12,
+//     padding: 5,
+//     content: "1111111",
+//     border: "10px solid black",
+//     P_ElementText: '在Template給新增 args 的key值, 再針對key值給予參數!!!'
+// }
+
+export const Large = {
+  args: {
     bgColor: "red",
-    fontSize: 12,
+    fontSize: 20,
     padding: 5,
     content: "1111111",
     border: "10px solid black",
-    P_ElementText: '在Template給新增 args 的key值, 再針對key值給予參數!!!'
-
+    P_ElementText: '在Template給新增 args 的key值, 再針對key值給予參數!!!',
+    value_Date: "2023/02/25"
+  },
 }
-
 // Parameters 會在tool bar增加相關的樣式調整
 Large.parameters= {
         backgrounds: {

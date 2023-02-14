@@ -3,7 +3,7 @@ import propTypes from "prop-types"
 import './button.scss'
 
 // sb ui controls default is from argument of Button Component 
-const Button =({bgColor, fontSize, border , padding=5 , fontWeight= 300,content ,clickHandler=()=>{}})=>{
+const Button =({bgColor, fontSize, border , padding=5 , fontWeight= 300,content ,onClickHandler=()=>{}})=>{
     // const {bgColor= 'none', fontSize=12, border="none" , padding=5 , fontWeight= 300} = props
     const style = {
         backgroundColor: bgColor,
@@ -12,7 +12,7 @@ const Button =({bgColor, fontSize, border , padding=5 , fontWeight= 300,content 
         padding: `${padding}px`,
         fontWeight: fontWeight,
     }
-    return <button style={style} onClick={clickHandler}>
+    return <button style={style} onClick={onClickHandler}>
         {content}
     </button>
 }
